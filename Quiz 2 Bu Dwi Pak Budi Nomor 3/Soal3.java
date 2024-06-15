@@ -1,0 +1,43 @@
+// Link Soal : https://drive.google.com/file/d/1k1BKLgcyWhvLjokyjOySbjRcy7jwmCJO/view?usp=sharing
+// Author : Hafidz Mulia 
+
+public class Soal3 {
+  public static void main(String[] args) {
+    cetak(new Gagak()); // Mencetak Gagak.getKet() = Burung, Gagak.warna = Coklat, Output : "Burung COKLAT"
+    cetak(new Burung()); // Mencetak Burung.getKet() = Burung, Burung.warna = HITAM, Output : "Burung HITAM"
+    cetak(new Hewan()); // Mencetak Hewan.getKet() = HEWAN, Hewan.warna = HITAM, Output : "HEWAN HITAM" 
+  }  
+  public static void cetak(Hewan x){ // Method cetak dengan parameter objek Hewan
+        System.out.println(x.getKet()+" "+x.warna);
+  }
+}
+
+class Gagak extends Burung{
+    // Konstruktor Gagak() -> memanggil konstruktor Hewan() -> warna = HITAM
+    // Sementara Gagak.getKet() = Burung, karena berasal dari class Burung
+    public Gagak(){
+        warna = "COKLAT";
+    }
+}
+
+
+class Burung extends Hewan{
+    // Burung.warna = HITAM, karena konstruktor Hewan() -> warna = HITAM
+    // Burung.getKet() = Burung
+    public String getKet(){
+        return "Burung";
+    }
+}
+
+class Hewan{
+    protected String warna;
+
+    // Konstruktor Hewan() -> warna = HITAM
+    public Hewan(){
+        warna = "HITAM";
+    }
+    // Hewan.getKet() = HEWAN
+    public String getKet(){
+        return "HEWAN";
+    }
+}
