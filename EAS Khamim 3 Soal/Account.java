@@ -1,0 +1,45 @@
+// Link soal : https://docs.google.com/document/d/1xR_7rg2AJWzKQ_W-JZI0v5ZgHVCA9rxo/edit?usp=sharing&ouid=107026307665299418190&rtpof=true&sd=true
+// Author : Hafidz Mulia
+public class Account {
+    private long Acc_no;
+    private String name, email;
+    private int amount;
+    public long getAcc_no() {
+        return Acc_no;
+    }
+    public void setAcc_no(long acc_no) {
+        Acc_no = acc_no;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public int getAmount() {
+        return amount;
+    }
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+    // public void info(){
+    //     System.out.println("Account Number: "+getAcc_no());
+    //     System.out.println("Name: "+getName());
+    //     System.out.println("Email: "+getEmail());
+    //     System.out.println("Amount: "+getAmount());
+    // }
+    public static void main(String[] args) {
+        Account a = new Account();
+        a.setAcc_no(123456);
+        a.setName("Maudy Ayunda");
+        a.setEmail("mayunda@gmail.com");
+        a.setAmount(50000000);
+        System.out.println(a.getAcc_no() + " " + a.getName() + " " + a.getEmail() + " " + a.getAmount());
+    }
+}
